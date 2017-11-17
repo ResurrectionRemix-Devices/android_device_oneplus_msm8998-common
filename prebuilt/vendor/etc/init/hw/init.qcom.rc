@@ -62,6 +62,8 @@ on init
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
+    write /sys/class/graphics/fb0/idle_time 100
+
 on early-boot
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
