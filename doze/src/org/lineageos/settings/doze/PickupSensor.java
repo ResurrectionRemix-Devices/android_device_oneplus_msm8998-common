@@ -25,10 +25,10 @@ import android.hardware.SensorManager;
 import android.os.SystemClock;
 import android.util.Log;
 
-public class TiltSensor implements SensorEventListener {
+public class PickupSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "TiltSensor";
+    private static final String TAG = "PickupSensor";
 
     private static final int BATCH_LATENCY_IN_MS = 100;
     private static final int MIN_PULSE_INTERVAL_MS = 2500;
@@ -39,10 +39,10 @@ public class TiltSensor implements SensorEventListener {
 
     private long mEntryTimestamp;
 
-    public TiltSensor(Context context) {
+    public PickupSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_TILT_DETECTOR);
+        mSensor = Utils.getSensor(mSensorManager, "com.oneplus.sensor.pickup");
     }
 
     @Override
