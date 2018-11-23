@@ -27,6 +27,16 @@
 # DPM
 /system/bin/dpmd                                                u:object_r:dpmd_exec:s0
 
+
+# Display Mode
+/sys/devices/virtual/graphics/fb0/oneplus_mode                  u:object_r:sysfs_dm:s0
+/sys/devices/virtual/graphics/fb0/srgb                          u:object_r:sysfs_dm:s0
+/sys/devices/virtual/graphics/fb0/dci_p3                        u:object_r:sysfs_dm:s0
+/sys/devices/virtual/graphics/fb0/hbm                           u:object_r:sysfs_dm:s0
+/sys/devices/virtual/graphics/fb0/night_mode                    u:object_r:sysfs_dm:s0
+/sys/devices/virtual/graphics/fb0/panel_serial_number           u:object_r:sysfs_dm:s0
+/sys/devices/virtual/graphics/fb0/adaption_mode                 u:object_r:sysfs_dm:s0
+
 # DRM
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.drmkey@1\.0-service    u:object_r:hal_drm_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.hdcpkey@1\.0-service   u:object_r:hal_hdcpkey_default_exec:s0
