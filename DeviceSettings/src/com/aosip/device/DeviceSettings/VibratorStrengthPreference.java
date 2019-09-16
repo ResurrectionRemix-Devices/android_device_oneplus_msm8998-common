@@ -80,7 +80,10 @@ public class VibratorStrengthPreference extends Preference implements
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
         editor.putString(DeviceSettings.KEY_VIBSTRENGTH, newValue);
         editor.commit();
-	}
+        if (withFeedback) {
+            mVibrator.vibrate(testVibrationPattern, -1);
+        }
+    }
 
     public static void restore(Context context) {
         if (!isSupported()) {
@@ -91,9 +94,8 @@ public class VibratorStrengthPreference extends Preference implements
         Utils.writeValue(FILE_LEVEL, storedValue);
     }
 
-    public void onProgressChanged(SeekBar seekBar, int progress,
-            boolean fromTouch) {
-        setValue(String.valueOf(progress + mMinValue), true);
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch) {
+        // NA
     }
 
     public void onStartTrackingTouch(SeekBar seekBar) {
@@ -101,6 +103,6 @@ public class VibratorStrengthPreference extends Preference implements
     }
 
     public void onStopTrackingTouch(SeekBar seekBar) {
-        // NA
+        setValue(String.valueOf(seekBar.getProgress() + mMinValue), true);
     }
 }
