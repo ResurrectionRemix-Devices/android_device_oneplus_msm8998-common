@@ -26,7 +26,9 @@ $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-aosip
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -144,6 +146,10 @@ PRODUCT_PACKAGES += \
     cneapiclient \
     com.quicinc.cne \
     services-ext
+
+# Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
 
 # Display
 PRODUCT_PACKAGES += \
