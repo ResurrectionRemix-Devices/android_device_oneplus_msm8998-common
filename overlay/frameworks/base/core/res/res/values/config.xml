@@ -687,6 +687,18 @@
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
+    <!-- The list absolute paths of jar/apk files containing the device specific handlers,
+         delimited by File.pathSeparator, which defaults to ":" on Android -->
+    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
+        <item>/system/framework/com.oneplus.keyhandler.jar</item>
+    </string-array>
+
+    <!-- Full qualified name of the class that implements
+         com.android.internal.os.DeviceKeyHandler interface. -->
+    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
+        <item>com.oneplus.settings.device.KeyHandler</item>
+    </string-array>
+    
     <!-- All the capabilities of the LEDs on this device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following capabilities present:
