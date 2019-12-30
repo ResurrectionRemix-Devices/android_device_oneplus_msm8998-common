@@ -20,12 +20,12 @@ import re
 
 def FullOTA_Assertions(info):
   AddVendorAssertion(info)
-  AddModemAssertion(info)
+  AddModemAssertion(info, False)
   return
 
 def IncrementalOTA_Assertions(info):
   AddVendorAssertion(info)
-  AddModemAssertion(info)
+  AddModemAssertion(info, True)
   return
 
 def AddVendorAssertion(info):
@@ -34,8 +34,12 @@ abort("Error: Vendor partition doesn\'t exist!"););'
   info.script.AppendExtra(cmd)
   return
 
-def AddModemAssertion(info):
-  android_info = info.input_zip.read("OTA/android-info.txt")
+def AddModemAssertion(info, incremental):
+  if incremental:
+    input_zip = info.source_zip
+  else:
+    input_zip = info.input_zip
+  android_info = input_zip.read("OTA/android-info.txt")
   m = re.search(r'require\s+version-modem\s*=\s*(.+)', android_info)
   f = re.search(r'require\s+version-firmware\s*=\s*(.+)', android_info)
   if m and f:
