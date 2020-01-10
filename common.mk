@@ -144,11 +144,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
 
-# Camera
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    vendor.camera.aux.packagelist=com.oneplus.camera,org.lineageos.snap,com.google.android.GoogleCamera \
-    vendor.camera.hal1.packagelist=com.whatsapp
-
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
