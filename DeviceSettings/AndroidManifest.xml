@@ -13,6 +13,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
           package="com.aosip.device.DeviceSettings"
           android:versionCode="1"
@@ -27,7 +28,7 @@
         android:minSdkVersion="24" />
 
     <application
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_settings_device"
         android:label="@string/device_title"
         android:theme="@style/AppTheme">
 
@@ -55,8 +56,7 @@
             android:name="com.aosip.device.DeviceSettings.PanelSettingsActivity"
             android:exported="true"
             android:label="@string/panel_category_title"
-            android:launchMode="singleTask"
-            android:noHistory="true">
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />

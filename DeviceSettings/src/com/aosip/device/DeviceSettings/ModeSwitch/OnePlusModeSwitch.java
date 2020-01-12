@@ -20,9 +20,9 @@ package com.aosip.device.DeviceSettings;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.PreferenceManager;
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceManager;
 
 import com.aosip.device.DeviceSettings.DeviceSettings;
 

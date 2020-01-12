@@ -28,12 +28,8 @@ LOCAL_PACKAGE_NAME := DeviceSettings
 LOCAL_USE_AAPT2 := true
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-v4 \
-    android-support-v7-appcompat \
-    android-support-v7-preference \
-    android-support-v7-recyclerview \
-    android-support-v13 \
-    android-support-v14-preference
+    androidx.core_core \
+    androidx.preference_preference
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \

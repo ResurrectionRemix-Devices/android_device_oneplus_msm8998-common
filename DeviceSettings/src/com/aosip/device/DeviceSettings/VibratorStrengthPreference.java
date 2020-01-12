@@ -20,9 +20,6 @@ package com.aosip.device.DeviceSettings;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceManager;
-import android.support.v7.preference.PreferenceViewHolder;
 import android.database.ContentObserver;
 import android.util.AttributeSet;
 import android.view.View;
@@ -31,6 +28,9 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.util.Log;
 import android.os.Vibrator;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceViewHolder;
 
 public class VibratorStrengthPreference extends Preference implements
         SeekBar.OnSeekBarChangeListener {
@@ -80,10 +80,7 @@ public class VibratorStrengthPreference extends Preference implements
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
         editor.putString(DeviceSettings.KEY_VIBSTRENGTH, newValue);
         editor.commit();
-        if (withFeedback) {
-            mVibrator.vibrate(testVibrationPattern, -1);
-        }
-    }
+	}
 
     public static void restore(Context context) {
         if (!isSupported()) {
@@ -94,8 +91,9 @@ public class VibratorStrengthPreference extends Preference implements
         Utils.writeValue(FILE_LEVEL, storedValue);
     }
 
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch) {
-        // NA
+    public void onProgressChanged(SeekBar seekBar, int progress,
+            boolean fromTouch) {
+        setValue(String.valueOf(progress + mMinValue), true);
     }
 
     public void onStartTrackingTouch(SeekBar seekBar) {
@@ -103,6 +101,6 @@ public class VibratorStrengthPreference extends Preference implements
     }
 
     public void onStopTrackingTouch(SeekBar seekBar) {
-        setValue(String.valueOf(seekBar.getProgress() + mMinValue), true);
+        // NA
     }
 }
