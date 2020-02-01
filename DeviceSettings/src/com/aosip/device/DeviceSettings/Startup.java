@@ -25,7 +25,11 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.preference.PreferenceManager;
 
+import com.aosip.device.DeviceSettings.TouchscreenGestureSettings;
+
 public class Startup extends BroadcastReceiver {
+
+    private static final String ONE_TIME_TUNABLE_RESTORE = "hardware_tunable_restored";
 
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
@@ -33,6 +37,7 @@ public class Startup extends BroadcastReceiver {
         VibratorStrengthPreference.restore(context);
 
         boolean enabled = false;
+        TouchscreenGestureSettings.MainSettingsFragment.restoreTouchscreenGestureStates(context);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SRGB_SWITCH, false);
         restore(SRGBModeSwitch.getFile(), enabled);
@@ -60,5 +65,15 @@ public class Startup extends BroadcastReceiver {
             return;
         }
         Utils.writeValue(file, value);
+    }
+
+    private boolean hasRestoredTunable(Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(ONE_TIME_TUNABLE_RESTORE, false);
+    }
+
+    private void setRestoredTunable(Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        preferences.edit().putBoolean(ONE_TIME_TUNABLE_RESTORE, true).apply();
     }
 }
