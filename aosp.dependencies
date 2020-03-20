@@ -14,5 +14,11 @@
     "target_path": "packages/apps/PixelLiveWallpaper",
     "branch": "ten",
     "remote": "pixel-gitlab"
+  },
+  {
+    "repository": "vendor_oneplus_firmware",
+    "target_path": "vendor/oneplus/firmware",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
   }
 ]
