@@ -81,6 +81,8 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
 TARGET_KERNEL_CONFIG := weeb_defconfig
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/arm64-gcc/bin
+KERNEL_TOOLCHAIN_PREFIX := aarch64-elf-
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
