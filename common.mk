@@ -74,9 +74,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    $(LOCAL_PATH)/prebuilts/system/etc/permissions/com.google.android.GoogleCamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.GoogleCamera.xml \
-    $(LOCAL_PATH)/prebuilts/system/etc/permissions/privapp-permissions-oem.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oem.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml 
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -140,13 +138,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
-    libshim_camera \
-    GoogleCamera \
-    OnePlusCamera \
-    OnePlusCameraService \
-    oneplus-framework-res \
-    OnePlusGallery \
-    vendor.oneplus.camera.CameraHIDL-V1.0-java
+    libshim_camera 
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
@@ -346,6 +338,18 @@ PRODUCT_PACKAGES += \
     com.oneplus.keyhandler
 
 PRODUCT_SYSTEM_SERVER_JARS += com.oneplus.keyhandler
+
+# Prebuilts
+PRODUCT_PACKAGES += \
+    GoogleCamera \
+    OnePlusCamera \
+    OnePlusCameraService \
+    oneplus-framework-res \
+    OnePlusGallery \
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/system/etc/permissions/com.google.android.GoogleCamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.GoogleCamera.xml \
+    $(LOCAL_PATH)/prebuilts/system/etc/permissions/privapp-permissions-oem.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oem.xml
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
