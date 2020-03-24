@@ -1,4 +1,3 @@
-ifeq (true,false)
 ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
 
 LOCAL_PATH := $(call my-dir)
@@ -25,7 +24,13 @@ QMI_BOARD_PLATFORM_LIST += msmpeafowl
 QMI_BOARD_PLATFORM_LIST += sdm710
 QMI_BOARD_PLATFORM_LIST += qcs605
 QMI_BOARD_PLATFORM_LIST += msmnile
+QMI_BOARD_PLATFORM_LIST += sdmshrike
 QMI_BOARD_PLATFORM_LIST += $(MSMSTEPPE)
+QMI_BOARD_PLATFORM_LIST += $(TRINKET)
+QMI_BOARD_PLATFORM_LIST += kona
+QMI_BOARD_PLATFORM_LIST += lito
+QMI_BOARD_PLATFORM_LIST += bengal
+QMI_BOARD_PLATFORM_LIST += atoll
 
 ifneq (,$(filter $(QMI_BOARD_PLATFORM_LIST),$(TARGET_BOARD_PLATFORM)))
 include $(call all-subdir-makefiles)
@@ -53,4 +58,3 @@ $(shell ln -sf /firmware/image/gss.mdt $(TARGET_OUT_ETC)/firmware/gss.mdt)
 endif
 
 endif#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE
-endif
