@@ -27,7 +27,7 @@ def IncrementalOTA_Assertions(info):
   return
 
 def OTA_UpdateFirmware(info):
-  info.script.AppendExtra('ui_print("Flashing OxygenOS 9.0.11 firmware + radio...");')
+  info.script.AppendExtra('ui_print("Flashing H2OS initial beta firmware + radio...");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/static_nvbk.bin", "/dev/block/bootdevice/by-name/oem_stanvbk");')  
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");')
