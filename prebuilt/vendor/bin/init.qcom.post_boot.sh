@@ -3785,6 +3785,9 @@ esac
 case "$target" in
     "msm8998" | "apq8098_latv")
 
+	# Enable sched systrace
+	echo 1 >  /sys/kernel/debug/tracing/events/sched/sched_get_task_cpu_cycles/enable
+
 	# Enable Adaptive LMK denzel.chen
 	echo "18432,23040,27648,51256,150296,200640" > /sys/module/lowmemorykiller/parameters/minfree
 
