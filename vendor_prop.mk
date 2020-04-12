@@ -134,8 +134,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.privapp.list=com.oneplus.camera,org.lineageos.snap,com.google.android.GoogleCamera \
-    vendor.camera.aux.packagelist=com.oneplus.camera,org.lineageos.snap,com.google.android.GoogleCamera \
+    persist.vendor.camera.privapp.list=com.oneplus.camera,org.codeaurora.snapcam,com.google.android.GoogleCamera \
+    vendor.camera.aux.packagelist=com.oneplus.camera,org.codeaurora.snapcam,com.google.android.GoogleCamera \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
     persist.ts.rtmakeup=false \
