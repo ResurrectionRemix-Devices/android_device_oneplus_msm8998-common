@@ -28,7 +28,7 @@ def IncrementalOTA_Assertions(info):
 
 def OTA_UpdateFirmware(info):
   info.script.AppendExtra('ui_print("----------------------------------------------");')
-  info.script.AppendExtra('ui_print("---Flashing H2OS beta 2 firmware + radio...---");')
+  info.script.AppendExtra('ui_print("---Flashing H2OS beta 3 firmware + radio...---");')
   info.script.AppendExtra('ui_print("----------------------------------------------");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/static_nvbk.bin", "/dev/block/bootdevice/by-name/oem_stanvbk");')  
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");')
