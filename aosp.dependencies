@@ -2,12 +2,12 @@
   {
     "repository":  "kernel_oneplus_msm8998",
     "target_path": "kernel/oneplus/msm8998",
-    "branch": "ten-wip"
+    "branch": "ten"
   },
   {
     "repository":  "vendor_oneplus",
     "target_path": "vendor/oneplus",
-    "branch": "ten-wip"
+    "branch": "ten"
   },
   {
     "repository": "packages_apps_PixelLiveWallpaper",
@@ -18,7 +18,7 @@
   {
     "repository": "vendor_oneplus-firmware",
     "target_path": "vendor/oneplus/firmware",
-    "branch": "ten-wip",
+    "branch": "ten",
     "remote": "pixel-gitlab"
   },
   {
