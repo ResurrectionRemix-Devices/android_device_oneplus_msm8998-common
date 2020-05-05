@@ -3809,7 +3809,7 @@ case "$target" in
     # Enable input boost configuration
     # simon.ma+@2018/09/28,modify the input_boost_freq and input_boost_ms to make the anim smooth
     echo "0:1036800 4:1056000" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 450 > /sys/module/cpu_boost/parameters/input_boost_ms
+    echo 150 > /sys/module/cpu_boost/parameters/input_boost_ms
 
 	# Enable Adaptive LMK denzel.chen
 	echo "18432,23040,27648,51256,150296,200640" > /sys/module/lowmemorykiller/parameters/minfree
