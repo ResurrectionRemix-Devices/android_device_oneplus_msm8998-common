@@ -17,6 +17,8 @@
 #ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H
 #define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H
 
+#include <hidl/MQDescriptor.h>
+#include <hidl/Status.h>
 #include <vendor/lineage/livedisplay/2.0/IPictureAdjustment.h>
 
 namespace vendor {
@@ -25,9 +27,13 @@ namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
 
-using ::android::sp;
+using ::android::hardware::hidl_array;
+using ::android::hardware::hidl_memory;
+using ::android::hardware::hidl_string;
+using ::android::hardware::hidl_vec;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
+using ::android::sp;
 
 class PictureAdjustment : public IPictureAdjustment {
   public:
@@ -44,7 +50,7 @@ class PictureAdjustment : public IPictureAdjustment {
     Return<void> getPictureAdjustment(getPictureAdjustment_cb _hidl_cb) override;
     Return<void> getDefaultPictureAdjustment(getDefaultPictureAdjustment_cb _hidl_cb) override;
     Return<bool> setPictureAdjustment(
-            const ::vendor::lineage::livedisplay::V2_0::HSIC& hsic) override;
+        const ::vendor::lineage::livedisplay::V2_0::HSIC& hsic) override;
 
     static void updateDefaultPictureAdjustment();
 
