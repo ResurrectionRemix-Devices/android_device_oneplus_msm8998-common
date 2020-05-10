@@ -91,6 +91,9 @@
 /firmware(/.*)?                                                 u:object_r:firmware_file:s0
 /bt_firmware(/.*)?                                              u:object_r:bt_firmware_file:s0
 
+# Tracing
+/(vendor|system/vendor)/bin/hw/android\.hardware\.atrace@1.0-service\.pixel     u:object_r:hal_atrace_default_exec:s0
+
 # Wifi
 /(vendor|system/vendor)/bin/wifi-mac-generator                  u:object_r:wifi_mac_generator_exec:s0
 
