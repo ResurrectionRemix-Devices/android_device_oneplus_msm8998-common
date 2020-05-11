@@ -501,7 +501,7 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Enable updating of APEXes
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Never dexopt the KeyHandler
 $(call add-product-dex-preopt-module-config, com.oneplus.keyhandler, disable)
