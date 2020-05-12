@@ -310,6 +310,10 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0-service \
     SecureElement
 
+# OEM Unlock reporting
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -443,6 +447,10 @@ PRODUCT_PACKAGES += \
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
+
+# Verity
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+$(call inherit-product, build/target/product/verity.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
