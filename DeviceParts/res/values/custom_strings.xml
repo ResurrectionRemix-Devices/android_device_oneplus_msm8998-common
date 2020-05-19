@@ -52,4 +52,9 @@
     <string name="notification_slider_mode_priority_only">Priority only</string>
     <string name="notification_slider_mode_vibration">Vibration</string>
     <string name="notification_slider_mode_none">None</string>
+
+    <!-- DC Dimming -->
+    <string name="display_summary">Display</string>
+    <string name="dc_dimming_summary"></string>
+    <string name="dc_dimming_title">DC Dimming</string>
 </resources>
