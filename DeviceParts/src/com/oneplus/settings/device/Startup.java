@@ -21,6 +21,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.ServiceManager;
 import android.util.Log;
 
@@ -106,6 +107,13 @@ public class Startup extends BroadcastReceiver {
                         Log.w(TAG, "Write to node " + node +
                                 " failed while restoring saved preference values");
                     }
+                }
+                if (Build.DEVICE.equals("OnePlus5")) {
+                    FileUtils.writeLine("/proc/flicker_free/min_brightness", "66");
+                } else if (Build.DEVICE.equals("OnePlus5T")) {
+                    FileUtils.writeLine("/proc/flicker_free/min_brightness", "302");
+                } else {
+                    Log.w(TAG, "Failed to set min_brightness for flicker_free driver");
                 }
             }
         }
