@@ -73,13 +73,6 @@ void property_override(const std::string& name, const std::string& value)
     }
 }
 
-void property_override_dual(char const system_prop[], char const vendor_prop[],
-    char const value[])
-{
-    property_override(system_prop, value);
-    property_override(vendor_prop, value);
-}
-
 void init_target_properties()
 {
     std::string device;
@@ -226,21 +219,4 @@ void vendor_load_properties() {
     init_fingerprint_properties();
     init_alarm_boot_properties();
     init_dalvik_vm_properties();
-
-    std::string device;
-    // fingerprint
-    if (ReadFileToString(DEVINFO_FILE, &device)) {
-        if (!strncmp(device.c_str(), "16859", 5)) {
-            // OnePlus 5
-            property_override("ro.build.description", "OnePlus5-user 8.1.0 OPM1.171019.011 1 release-keys");
-        }
-        else if (!strncmp(device.c_str(), "17801", 5)) {
-            // OnePlus 5T
-            property_override("ro.build.description", "OnePlus5T-user 8.1.0 OPM1.171019.011 1 release-keys");
-        }
-        else {
-            LOG(ERROR) << __func__ << ": unexcepted device!";
-        }
-    }
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
 }
