@@ -87,9 +87,6 @@ KERNEL_TOOLCHAIN_PREFIX := aarch64-elf-
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 
