@@ -87,9 +87,7 @@ public class Startup extends BroadcastReceiver {
                 }
             }
 
-            if (!hasDCDimming()) {
-                disableComponent(context, TouchscreenGestureSettings.class.getName());
-            } else {
+            if (hasDCDimming()) {
                 enableComponent(context, TouchscreenGestureSettings.class.getName());
                 // Restore nodes to saved preference values
                 for (String pref : Constants.sDCPrefKeys) {
