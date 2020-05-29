@@ -326,13 +326,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# OnePlus Settings
-PRODUCT_PACKAGES += \
-    DeviceParts \
-    com.oneplus.keyhandler
-
-PRODUCT_SYSTEM_SERVER_JARS += com.oneplus.keyhandler
-
 # Prebuilts
 PRODUCT_PACKAGES += \
     GoogleCamera
@@ -506,6 +499,3 @@ PRODUCT_BOOT_JARS += \
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Never dexopt the KeyHandler
-$(call add-product-dex-preopt-module-config, com.oneplus.keyhandler, disable)
