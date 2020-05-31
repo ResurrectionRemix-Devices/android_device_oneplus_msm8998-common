@@ -46,7 +46,11 @@ public class DeviceSettings extends PreferenceFragment
 
     public static final String KEY_DC_SWITCH = "dc";
 
+    public static final String KEY_BUTTON_SWAP = "button_swap";
+    
     private static TwoStatePreference mDCModeSwitch;
+    
+    private static TwoStatePreference mButtonSwap;
     
     private ListPreference mTopKeyPref;
     private ListPreference mMiddleKeyPref;
@@ -71,6 +75,11 @@ public class DeviceSettings extends PreferenceFragment
         mDCModeSwitch.setEnabled(DCModeSwitch.isSupported());
         mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
         mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
+
+        mButtonSwap = (TwoStatePreference) findPreference(KEY_BUTTON_SWAP);
+        mButtonSwap.setEnabled(ButtonSwap.isSupported());
+        mButtonSwap.setChecked(ButtonSwap.isCurrentlyEnabled(this.getContext()));
+        mButtonSwap.setOnPreferenceChangeListener(new ButtonSwap());
     }
 
     @Override

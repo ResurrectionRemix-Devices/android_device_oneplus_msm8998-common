@@ -42,6 +42,9 @@ public class Startup extends BroadcastReceiver {
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DC_SWITCH, false);
         restore(DCModeSwitch.getFile(), enabled);
 
+        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_BUTTON_SWAP, false);
+        restore(ButtonSwap.getFile(), enabled);
+
         if (Build.DEVICE.equals("OnePlus5")) {
             restore("/proc/flicker_free/min_brightness", "66");
         } else if (Build.DEVICE.equals("OnePlus5T")) {
