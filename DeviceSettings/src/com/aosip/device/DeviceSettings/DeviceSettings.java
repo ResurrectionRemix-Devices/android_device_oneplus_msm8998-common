@@ -44,12 +44,6 @@ import com.aosip.device.DeviceSettings.FileUtils;
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    public static final String KEY_SRGB_SWITCH = "srgb";
-    public static final String KEY_DCI_SWITCH = "dci";
-    public static final String KEY_NIGHT_SWITCH = "night";
-    public static final String KEY_ADAPTIVE_SWITCH = "adaptive";
-    public static final String KEY_ONEPLUS_SWITCH = "oneplus";
-
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     private VibratorStrengthPreference mVibratorStrength;
 
