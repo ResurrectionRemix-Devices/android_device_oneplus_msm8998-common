@@ -27,8 +27,8 @@
         
         <SwitchPreference
             android:key="dc"
-            android:summary="@string/dc_mode_summary"
-            android:title="@string/dc_mode_title" />
+            android:summary="@string/dc_dimming_enable_summary"
+            android:title="@string/dc_dimming_enable_title" />
 
     </PreferenceCategory>
 
@@ -62,7 +62,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory 
-        android:title="@string/button_dashboard_summary">
+        android:title="@string/button_panel_title">
 
         <SwitchPreference
             android:key="button_swap"
