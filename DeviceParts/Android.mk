@@ -24,11 +24,4 @@ LOCAL_PACKAGE_NAME := DeviceParts
 LOCAL_MODULE_TAGS := optional
 LOCAL_PRIVATE_PLATFORM_APIS := true
 
-LOCAL_RESOURCE_DIR := \
-    $(LOCAL_PATH)/res \
-    $(LOCAL_PATH)/../../../../packages/resources/devicesettings/res \
-    $(LOCAL_PATH)/../../../../packages/resources/devicesettings-custom/res
-
-LOCAL_AAPT_FLAGS := --auto-add-overlay
-
 include $(BUILD_PACKAGE)

@@ -47,7 +47,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/button_panel_title">
+    <PreferenceCategory android:title="@string/button_dashboard_summary">
 
         <SwitchPreference
             android:key="button_swap"
@@ -57,11 +57,11 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/gesture_display_title">
+    <PreferenceCategory android:title="@string/screen_gestures_summary">
 
         <SwitchPreference
             android:key="touchscreen_gesture_camera"
-            android:title="@string/touchscreen_c_gesture_title"
+            android:title="@string/touchscreen_camera_gesture_title"
             android:summary="@string/touchscreen_camera_gesture_summary"
             android:icon="@drawable/ic_camera" />
 
@@ -73,25 +73,25 @@
 
         <SwitchPreference
             android:key="touchscreen_gesture_flashlight"
-            android:title="@string/touchscreen_z_gesture_title"
-            android:summary="@string/touchscreen_flashlight_v_gesture_summary" 
+            android:title="@string/touchscreen_flashlight_gesture_title"
+            android:summary="@string/touchscreen_flashlight_gesture_summary" 
             android:icon="@drawable/ic_flashlight" />
 
         <SwitchPreference
             android:key="touchscreen_gesture_haptic_feedback"
             android:persistent="false"
-            android:title="@string/touchscreen_gesture_haptic_feedback"
-            android:summary="@string/touchscreen_gesture_haptic_feedback_summary" 
+            android:title="@string/haptic_feedback"
+            android:summary="@string/haptic_feedback_summary" 
             android:icon="@drawable/ic_haptic_feedback" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/display_title">
+    <PreferenceCategory android:title="@string/display_summary">
 
         <SwitchPreference
             android:key="dc_dimming"
-            android:summary="@string/dc_dimming_enable_summary"
-            android:title="@string/dc_dimming_enable_title" 
+            android:summary="@string/dc_dimming_summary"
+            android:title="@string/dc_dimming_title" 
             android:icon="@drawable/ic_dc_dimming" />
 
     </PreferenceCategory>
