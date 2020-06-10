@@ -138,12 +138,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=com.oneplus.camera,org.codeaurora.snapcam,com.google.android.GoogleCamera \
+    vendor.camera.aux.packagelist=com.google.android.GoogleCamera,org.codeaurora.snapcam,com.oneplus.camera \
+    persist.vendor.camera.privapp.list=com.google.android.GoogleCamera,org.codeaurora.snapcam,com.oneplus.camera \
     vendor.camera.hal1.packagelist=com.whatsapp \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
     persist.ts.rtmakeup=false \
-    persist.vendor.camera.tintless.skip=1
+    persist.vendor.camera.tintless.skip=1 \
+    persist.camera.eis.enable=1 \
+    persist.camera.is_mode=4 \
+    persist.vendor.camera.oissr.debug=1 \
+    vendor.debug.camera.eisv2enable=1 \
+    vendor.debug.camera.eisv3enable=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
