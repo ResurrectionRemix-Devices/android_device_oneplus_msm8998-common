@@ -32,7 +32,7 @@ fi
 . "$HELPER"
 
 # Default to NOT sanitizing the vendor folder before extraction
-CLEAN_VENDOR=false
+CLEAN_VENDOR=true
 
 while [ "$1" != "" ]; do
     case $1 in
@@ -56,7 +56,6 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$AOSP_ROOT" true "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
-extract "$MY_DIR"/proprietary-files-qc-perf.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
 if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
@@ -67,19 +66,6 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
 fi
 
 COMMON_BLOB_ROOT="$AOSP_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
-
-#
-# Fix camera etc path
-#
-function fix_camera_etc_path () {
-    sed -i \
-        's/\/system\/etc\//\/vendor\/etc\//g' \
-        "$COMMON_BLOB_ROOT"/"$1"
-}
-
-fix_camera_etc_path vendor/lib/libmmcamera_imglib.so
-fix_camera_etc_path vendor/lib/libmmcamera_interface.so
-fix_camera_etc_path vendor/lib/libopcamera_native_modules.so
 
 #
 # Fix framework path
@@ -101,21 +87,20 @@ function fix_product_path () {
         "$COMMON_BLOB_ROOT"/"$1"
 }
 
-fix_product_path product/etc/permissions/com.qualcomm.qti.imscmservice.xml
-fix_product_path product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
-fix_product_path product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
-fix_product_path product/etc/permissions/telephonyservice.xml
-fix_product_path product/etc/permissions/embms.xml
 fix_product_path product/etc/permissions/qcnvitems.xml
-fix_product_path product/etc/permissions/qcrilhook.xml
-fix_product_path product/etc/permissions/telephonyservice.xml
-fix_product_path product/etc/permissions/cneapiclient.xml
-fix_product_path product/etc/permissions/com.quicinc.cne.xml
+fix_product_path product/etc/permissions/vendor.qti.hardware.factory.xml
+fix_product_path product/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 
 #
-# Correct android.hidl.manager@1.0-java jar name
+# Fix xml version
 #
-sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g" \
-    "$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti_libpermissions.xml
+function fix_xml_version () {
+    sed -i \
+        's/xml version="2.0"/xml version="1.0"/' \
+        "$COMMON_BLOB_ROOT"/"$1"
+}
+
+fix_xml_version product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
+fix_xml_version product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 
 "$MY_DIR"/setup-makefiles.sh
