@@ -320,6 +320,8 @@ etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:product/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/permissions/vendor.qti.hardware.factory.xml:product/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/etc/powerhint.xml
+vendor/etc/qdcm_calib_data_samsung_s6e3fa5_1080p_cmd_mode_dsi_panel.xml
+vendor/etc/qdcm_calib_data_samsung_s6e3fa6_1080p_cmd_mode_dsi_panel.xml
 vendor/etc/qdcm_calib_data_samsung_s6e3fc1_cmd_mode_dsi_panel.xml|dc362ab09d4cd60f948c120c62b688fce539b40a
 vendor/etc/scve/facereco/gModel.dat
 vendor/etc/sensors/hals.conf
