@@ -52,7 +52,6 @@ lib64/vendor.oneplus.camera.CameraHIDL@1.0.so
 lib64/vendor.oneplus.fingerprint.extension@1.0.so
 lib64/vendor.oneplus.hardware.ifaa@2.0.so
 lib64/vendor.oneplus.hardware.param@1.0.so
-product/lib64/vendor.qti.esepowermanager@1.0.so
 product/lib64/vendor.qti.hardware.alarm@1.0.so
 product/lib64/vendor.qti.hardware.iop@1.0.so
 product/lib64/vendor.qti.hardware.iop@2.0.so
@@ -104,7 +103,6 @@ lib/vendor.oneplus.camera.CameraHIDL@1.0.so
 lib/vendor.oneplus.fingerprint.extension@1.0.so
 lib/vendor.oneplus.hardware.ifaa@2.0.so
 lib/vendor.oneplus.hardware.param@1.0.so
-product/lib/vendor.qti.esepowermanager@1.0.so
 product/lib/vendor.qti.hardware.alarm@1.0.so
 product/lib/vendor.qti.hardware.iop@1.0.so
 product/lib/vendor.qti.hardware.iop@2.0.so
@@ -173,14 +171,12 @@ vendor/bin/hbtp_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/bin/hw/android.hardware.secure_element@1.1-service
 vendor/bin/hw/qcrild
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/hw/vendor.oneplus.camera.CameraHIDL@1.0-service
 vendor/bin/hw/vendor.oneplus.hardware.drmkey@1.0-service
 vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
 vendor/bin/hw/vendor.oneplus.hardware.param@1.0-service
-vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
@@ -272,14 +268,12 @@ vendor/etc/hbtp/qtc800h_8998_660.bin
 vendor/etc/hbtp/qtc800h.bin
 vendor/etc/hbtp/qtc800s_dsp.bin
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
-vendor/etc/init/android.hardware.secure_element@1.1-service.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/init/qcrild.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.drmkey@1.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.param@1.0-service.rc
-vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
@@ -391,15 +385,12 @@ vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/egl/libQTapGLES.so
-vendor/lib64/ese_client.so
-vendor/lib64/ese_spi_nxp.so
 vendor/lib64/fp_hal_extension.so
 vendor/lib64/hw/activity_recognition.msm8998.so
 vendor/lib64/hw/android.hardware.drm@1.0-impl.so
 vendor/lib64/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
 vendor/lib64/hw/sound_trigger.primary.msm8998.so
-vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
@@ -630,7 +621,6 @@ vendor/lib64/libwvhidl.so
 vendor/lib64/libxml.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/nfc_nci_nxp.so
 vendor/lib64/qcrild_librilutils.so
 vendor/lib64/qtibus.so
 vendor/lib64/qtimutex.so
@@ -667,7 +657,6 @@ vendor/lib64/vendor.oneplus.hardware.wifi@1.1.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.1.so
 vendor/lib64/vendor.qti.data.slm@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.gnss@1.1.so
 vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
@@ -773,7 +762,6 @@ vendor/lib/hw/android.hardware.drm@1.0-impl.so
 vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib/hw/keystore.msm8998.so
 vendor/lib/hw/sound_trigger.primary.msm8998.so
-vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
@@ -1277,7 +1265,6 @@ vendor/lib/vendor.oneplus.hardware.param@1.0.so
 vendor/lib/vendor.qti.data.factory@2.0.so
 vendor/lib/vendor.qti.data.factory@2.1.so
 vendor/lib/vendor.qti.data.slm@1.0.so
-vendor/lib/vendor.qti.esepowermanager@1.0.so
 vendor/lib/vendor.qti.gnss@1.1.so
 vendor/lib/vendor.qti.gnss@1.2.so
 vendor/lib/vendor.qti.gnss@2.0.so
