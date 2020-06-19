@@ -271,9 +271,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_msm8998
 
+ifeq ($(findstring Plus, $(CUSTOM_VERSION)),)
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.oneplus_msm8998
+endif
 
 # Media
 PRODUCT_COPY_FILES += \
