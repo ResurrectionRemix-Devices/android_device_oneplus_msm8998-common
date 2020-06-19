@@ -27,8 +27,6 @@ lib64/libadsprpc_system.so
 lib64/libantradio.so
 lib64/libaptX_encoder.so:product/lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so:product/lib64/libaptXHD_encoder.so
-lib64/libbluetooth_qti.so
-lib64/libbtconfigstore.so
 lib64/libbt-logClient.so
 lib64/libcdsprpc_system.so
 product/lib64/libdiag_system.so
@@ -69,8 +67,6 @@ product/lib64/vendor.qti.hardware.vpp@1.1.so
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libadsprpc_system.so
 lib/libantradio.so
-lib/libbluetooth_qti.so
-lib/libbtconfigstore.so
 lib/libbt-logClient.so
 lib/libcdsprpc_system.so
 product/lib/libdiag_system.so
@@ -180,7 +176,6 @@ vendor/bin/garden_app
 vendor/bin/hbtp_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/bin/hw/android.hardware.secure_element@1.1-service
 vendor/bin/hw/qcrild
@@ -280,7 +275,6 @@ vendor/etc/hbtp/hbtpcfg.dat
 vendor/etc/hbtp/qtc800h_8998_660.bin
 vendor/etc/hbtp/qtc800h.bin
 vendor/etc/hbtp/qtc800s_dsp.bin
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/etc/init/android.hardware.secure_element@1.1-service.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
@@ -404,9 +398,7 @@ vendor/lib64/ese_client.so
 vendor/lib64/ese_spi_nxp.so
 vendor/lib64/fp_hal_extension.so
 vendor/lib64/hw/activity_recognition.msm8998.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.drm@1.0-impl.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
@@ -414,9 +406,6 @@ vendor/lib64/hw/sound_trigger.primary.msm8998.so
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -439,9 +428,7 @@ vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbccQTI.so
-vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbt-hidlclient.so
--vendor/lib64/libbtnv.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libcacertclient.so
@@ -692,9 +679,6 @@ vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0-service.so
 vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
-vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
@@ -790,9 +774,7 @@ vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/egl/libQTapGLES.so
 vendor/lib/fp_hal_extension.so
 vendor/lib/hw/activity_recognition.msm8998.so
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.drm@1.0-impl.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib/hw/keystore.msm8998.so
@@ -800,9 +782,6 @@ vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -840,10 +819,8 @@ vendor/lib/libaudioparsers.so
 vendor/lib/libavservices_minijail_vendor.so
 vendor/lib/libbase64.so
 vendor/lib/libbccQTI.so
-vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libblur_channel.so
 vendor/lib/libbt-hidlclient.so
--vendor/lib/libbtnv.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libcacertclient.so
@@ -1314,9 +1291,6 @@ vendor/lib/vendor.qti.gnss@2.1.so
 vendor/lib/vendor.qti.gnss@3.0-service.so
 vendor/lib/vendor.qti.gnss@3.0.so
 vendor/lib/vendor.qti.hardware.alarm@1.0.so
-vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so
 vendor/lib/vendor.qti.hardware.cacert@1.0.so
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/vendor.qti.hardware.cryptfshw@1.0.so

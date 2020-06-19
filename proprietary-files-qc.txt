@@ -1,3 +1,12 @@
 -product/priv-app/ims/ims.apk|7c5be9f53d0ddda350d0c5f635e514f841625fe5
 product/framework/qti-telephony-common.jar|b4d187700f279cdbd40e74b4c3be4504f10d8b29
 vendor/bin/time_daemon|553c69f6436187e1c210da26e3f45ac0d739e947
+
+# Bluetooth - from LA.UM.8.2.r1-06700-sdm660.0
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|5acf94f38e47c2ec43c95e132dfe7b5d71ec41c4
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|d186d72139e0bfbb05d99125b777547950a454ca
+vendor/lib64/libbtnv.so|a6793a7b93fa607fcec39da7479566f84ed39aa4
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|9b7ae20ce9d6d2a67fdac94268cec441278cca3d
+vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|e08969ef1897ec5958894323f7d6e730a1d7ce25
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|9c1b952043c7722fd27bfd971ecebb2584671862
