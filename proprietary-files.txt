@@ -22,7 +22,9 @@ product/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 product/framework/vendor.qti.hardware.soter-V1.0-java.jar
 product/framework/vendor.qti.voiceprint-V1.0-java.jar
 -framework/WfdCommon.jar
+-product/lib64/com.qualcomm.qti.ant@1.0.so
 lib64/libadsprpc_system.so
+lib64/libantradio.so
 lib64/libaptX_encoder.so:product/lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so:product/lib64/libaptXHD_encoder.so
 lib64/libbt-logClient.so
@@ -60,8 +62,10 @@ product/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 product/lib64/vendor.qti.hardware.soter@1.0.so
 product/lib64/vendor.qti.hardware.tui_comm@1.0.so
 product/lib64/vendor.qti.hardware.vpp@1.1.so
+-product/lib/com.qualcomm.qti.ant@1.0.so
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libadsprpc_system.so
+lib/libantradio.so
 lib/libbt-logClient.so
 lib/libcdsprpc_system.so
 product/lib/libdiag_system.so
@@ -371,6 +375,7 @@ vendor/etc/firmware/tfa98xx.cnt:vendor/firmware/tfa98xx.cnt
 vendor/framework/com.fingerprints.extension.jar
 product/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 vendor/lib64/btaudio_offload_if.so
+vendor/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
@@ -388,6 +393,7 @@ vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/fp_hal_extension.so
 vendor/lib64/hw/activity_recognition.msm8998.so
 vendor/lib64/hw/android.hardware.drm@1.0-impl.so
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
 vendor/lib64/hw/sound_trigger.primary.msm8998.so
@@ -740,6 +746,7 @@ vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib/btaudio_offload_if.so
+vendor/lib/com.qualcomm.qti.ant@1.0.so
 vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.0.so
@@ -759,6 +766,7 @@ vendor/lib/egl/libQTapGLES.so
 vendor/lib/fp_hal_extension.so
 vendor/lib/hw/activity_recognition.msm8998.so
 vendor/lib/hw/android.hardware.drm@1.0-impl.so
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib/hw/keystore.msm8998.so
 vendor/lib/hw/sound_trigger.primary.msm8998.so
