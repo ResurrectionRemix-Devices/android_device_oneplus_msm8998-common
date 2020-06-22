@@ -56,12 +56,10 @@ vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
 # Alipay
--priv-app/IFAAService/IFAAService.apk
-lib/vendor.oneplus.hardware.ifaa@2.0.so
-lib64/vendor.oneplus.hardware.ifaa@2.0.so
-vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
-vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
-vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
+-priv-app/IFAAService/IFAAService.apk|9b33bb59459c202b7e9777cc763febc7ef0d58a1
+lib64/vendor.oneplus.hardware.ifaa@2.0.so|fbe1d8dba89f2bc95e98716f95d63101b285b804
+vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service|25dd6f8fae986b1dddf547c1b106598c86b16b56
+vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc|17f485f5523372cc627503f36f1e84348233b777
 
 # Audio
 vendor/lib64/libacdb-fts.so
