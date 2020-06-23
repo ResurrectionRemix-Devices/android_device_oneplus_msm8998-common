@@ -984,12 +984,6 @@ vendor/etc/thermal-engine.conf
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time service
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon|553c69f6436187e1c210da26e3f45ac0d739e947
--vendor/lib/libtime_genoff.so
--vendor/lib64/libtime_genoff.so
-
 # Voiceprint
 product/framework/vendor.qti.voiceprint-V1.0-java.jar
 vendor/lib/vendor.qti.voiceprint@1.0.so
