@@ -242,3 +242,9 @@ vendor/etc/perf/perfconfigstore.xml|b1d147be38c5a11f13cab051360226ef15b432c5
 vendor/etc/perf/targetconfig.xml|460d39ad0a0e7c54a94ba92647ea2b995fc0fe18
 vendor/etc/perf/targetresourceconfigs.xml|4f674836df32fd51e2bc09f3b56af7ad1a6021a0
 vendor/etc/powerhint.xml|72512bd069cd88ed8d1ad6a23d1b1341d5ab8997
+
+# Peripheral manager - from LA.UM.8.2.r1-06700-sdm660.0
+vendor/bin/pm-proxy|3182c937d93cc02c6721c053f57fc6794ad7edb3
+vendor/bin/pm-service|835238076f47bf46cee01b27a76a96282eadb309
+vendor/lib/libperipheral_client.so|6a95436d0d649fff0a48a4662a0781330e723ae1
+vendor/lib64/libperipheral_client.so|18796ea27c31bd39946f23f2b4173bafd26d9216
