@@ -2,7 +2,7 @@
   {
     "repository":  "kernel_oneplus_msm8998",
     "target_path": "kernel/oneplus/msm8998",
-    "branch": "test"
+    "branch": "ten"
   },
   {
     "repository":  "vendor_oneplus",
@@ -22,8 +22,8 @@
     "remote": "pixel-gitlab"
   },
   {
-    "repository": "kdrag0n/proton-clang",
-    "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
+    "repository": "arter97/arm64-gcc",
+    "target_path": "prebuilts/arm64-gcc",
     "branch": "master",
     "remote": "github"
   }
