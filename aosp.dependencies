@@ -2,7 +2,7 @@
   {
     "repository":  "kernel_oneplus_msm8998",
     "target_path": "kernel/oneplus/msm8998",
-    "branch": "new"
+    "branch": "ten"
   },
   {
     "repository":  "vendor_oneplus_msm8998-common",
