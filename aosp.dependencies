@@ -20,7 +20,7 @@
     "repository": "vendor_oneplus-firmware",
     "target_path": "vendor/oneplus/firmware",
     "branch": "ten",
-    "remote": "pixel-gitlab"
+    "remote": "pixel-devices-blobs"
   },
   {
     "repository": "kdrag0n/proton-clang",
