@@ -234,6 +234,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C \
     persist.nfc.smartcard.config=SIM1,eSE1
 
+# Perf
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.extension_library=libqti-perfd-client.so
+
 # QSEE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.qsee=yes
