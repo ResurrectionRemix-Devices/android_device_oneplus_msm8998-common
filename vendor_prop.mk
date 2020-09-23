@@ -206,11 +206,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.min.fling_velocity=140 \
     ro.max.fling_velocity=20000
 
-# IOP
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.iop.enable_uxe=0 \
-    vendor.iop.enable_prefetch_ofr=0
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
