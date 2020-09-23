@@ -40,11 +40,6 @@ public class Startup extends BroadcastReceiver {
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_BUTTON_SWAP, false);
         restore(ButtonSwap.getFile(), enabled);
 
-        if (Build.DEVICE.equals("OnePlus5")) {
-            restore("/proc/flicker_free/min_brightness", "66");
-        } else if (Build.DEVICE.equals("OnePlus5T")) {
-            restore("/proc/flicker_free/min_brightness", "302");
-        }
     }
 
     private void restore(String file, boolean enabled) {
