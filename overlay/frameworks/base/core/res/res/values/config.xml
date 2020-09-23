@@ -734,4 +734,7 @@
 
     <!-- Whether to intercept inputs on screen off -->
     <bool name="config_enableKeyHandler">true</bool>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.resurrection.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
 </resources>
