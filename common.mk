@@ -435,6 +435,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service.pixel
 
+# tri-state-key
+PRODUCT_PACKAGES += \
+    tri-state-key_daemon
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
