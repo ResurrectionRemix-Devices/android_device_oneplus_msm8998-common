@@ -357,9 +357,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.rndis.func.name=gsi \
     sys.usb.rmnet.func.name=gsi
 
-# VNDK
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.vndk.version=28
 
 # VoLTE
 PRODUCT_PROPERTY_OVERRIDES += \
