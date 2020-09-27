@@ -11,12 +11,6 @@
     "remote": "pixel-devices-blobs"
   },
   {
-    "repository": "packages_apps_PixelLiveWallpaper",
-    "target_path": "packages/apps/PixelLiveWallpaper",
-    "branch": "ten",
-    "remote": "pixel-gitlab"
-  },
-  {
     "repository": "vendor_oneplus-firmware",
     "target_path": "vendor/oneplus/firmware",
     "branch": "ten",
